@@ -1,3 +1,8 @@
+/*
+By znet, 2020-10-13
+licensed under the terms of the MIT license.
+All rights reserved.
+*/
 #include<stdio.h>
 
 char josephOrderArray [30];
