@@ -28,10 +28,10 @@ void insertFirst(int number, int keyword)
    link->number = number;
    link->keyword = keyword;
 	
-   //point it to old first node
+  
    current -> next = link;
 	
-   //point first to new first node
+   
    current = link;
 }
 
