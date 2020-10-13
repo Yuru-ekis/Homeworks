@@ -1,7 +1,12 @@
+/*
+By znet, 2020-10-13
+licensed under the terms of the MIT license.
+All rights reserved.
+*/
 #include<stdio.h>
 
 char josephOrderArray [30];
-int n = 0; // n ÎªÈËÊı£¬ÇÒ n <= 30
+int n = 0; // n ä¸ºäººæ•°ï¼Œä¸” n <= 30
 
 struct Node {
     int number; 
@@ -54,14 +59,14 @@ int deleteNode(int m, struct Node *previous, struct Node *activeHead)
 
 int main() 
 {
-    int m = 0; // m ÊÇ³õÊ¼±¨ÊıÉÏÏŞÖµ
+    int m = 0; // m æ˜¯åˆå§‹æŠ¥æ•°ä¸Šé™å€¼
     
     int is_n_InputLegal = 0;
     int password = 0;
     current = (struct Node*) malloc(sizeof(struct Node));
     head = current;
 
-    printf("ÇëÊäÈëÈËÊı: ");
+    printf("è¯·è¾“å…¥äººæ•°: ");
     do
     {   
         scanf("%d", &n);
@@ -77,9 +82,9 @@ int main()
     } while (is_n_InputLegal == 0);
     
     
-    printf("ÇëÊäÈë³õÊ¼±¨ÊıÉÏÏŞÖµ: ");
+    printf("è¯·è¾“å…¥åˆå§‹æŠ¥æ•°ä¸Šé™å€¼: ");
     scanf("%d", &m);
-    printf("ÇëÊäÈëÃ¿¸öÈËµÄÃÜÂë£¬Ò»ĞĞÒ»¸ö: ");
+    printf("è¯·è¾“å…¥æ¯ä¸ªäººçš„å¯†ç ï¼Œä¸€è¡Œä¸€ä¸ª: ");
     scanf("%d", &password);
     head -> number = 1;
     head -> keyword = password;
@@ -90,7 +95,7 @@ int main()
     }
     current -> next = head;
     deleteNode(m, current, head);
-    printf("³öÁĞË³ĞòÎª: \n");
+    printf("å‡ºåˆ—é¡ºåºä¸º: \n");
     for (int i = 0; i < currentInOrderArray; i++)
     {
         printf("%d ", josephOrderArray[i]);
